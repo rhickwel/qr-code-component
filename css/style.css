@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --bg: hsl(212, 45%, 89%);
+    --card-bg: hsl(0, 0%, 100%);
+    --card-header-clr: hsl(218, 44%, 22%);
+    --card-paragraph-clr: hsl(220, 15%, 55%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+}
+
+body {
+    /* center card on the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* acts as a fallback in case device browser does not support svh */
+    min-height: 100vh;
+
+    /* use smallest viewport height to prevent height from overflowing when encountering mobile UI */
+    min-height: 100svh;
+    
+    background-color: var(--bg);
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+}
+
+svg,
+img,
+picture,
+video {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.card {
+    max-width: 20em;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 30px 45px 0 hsla(0, 0%, 0%, 0.10);
+    padding: 1em;
+}
+
+.card-qr-code {
+    border-radius: 10px;
+}
+
+.card-desc {
+    text-align: center;
+    margin: 1em 0.8em;
+}
+
+.card-header {
+    margin-bottom: 0.5em;
+
+    font-size: 1.4375rem;
+    font-weight: 700;
+    color: var(--card-header-clr);
+}
+
+.card-paragraph {
+    font-size: 0.94rem;
+    font-weight: 400;
+    color: var(--card-paragraph-clr);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1em;
+}
